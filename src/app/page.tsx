@@ -19,11 +19,11 @@ export default function Home() {
   function handleAddItem() {
     if (director && movie) {
       setItem([...item, { director, movie }])
+      setDirector("")
+      setMovie("")
     } else (
       alert("Enter director and movie names")
     )
-    setDirector("")
-    setMovie("")
   }
 
   return (
