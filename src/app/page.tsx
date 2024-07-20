@@ -39,7 +39,7 @@ export default function Home() {
         {
           item.length > 0 ? (
             item.map((movie, index) => (
-              <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-7 md:gap-5 mt-10">
+              <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-7 md:gap-5 mt-10" key={index}>
                 <div className="h-[3rem] col-span-3 p-3 border-2 mt-5 md:mt-0">{movie.director}</div>
                 <div className="h-[3rem] col-span-3 p-3 border-2 mt-5 md:mt-0">{movie.movie}</div>
                 <button className="bg-red-500 text-white mt-5 md:mt-0 min-h-[3rem]" onClick={() => handleRemoveMovie(index)}>Remove</button>
